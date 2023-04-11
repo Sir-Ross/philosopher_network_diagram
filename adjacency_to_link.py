@@ -5,7 +5,7 @@ lines = f_in.readlines()
 for line in lines:
     names = line.split('|')
     if len(names) == 1:
-        f_out2.write('"'+names[0]+'",')
+        f_out2.write('"'+names[0].replace('\n','')+'",\n')
     else:
         for i in range(1,len(names)):
             # Run for each name except first name
